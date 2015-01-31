@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info">
+
+    <id>digger:sisyphus</id>
+    <name>Sisyphus</name>
+    <type>modification</type>
+    <version>1.2</version>
+
+    <install for="2.0 - 2.1.99">
+        <readme parsebbc="true">readme/english.txt</readme>
+        <readme parsebbc="true" lang="russian">readme/russian.txt</readme>
+        <readme parsebbc="true" lang="english-utf8">readme/english-utf8.txt</readme>
+        <readme parsebbc="true" lang="russian-utf8">readme/russian-utf8.txt</readme>
+        <require-dir name="Sources" destination="$boarddir"/>
+        <require-dir name="scripts" destination="$themedir"/>
+        <code>hooks.php</code>
+    </install>
+
+    <uninstall for="2.0 - 2.1.99">
+        <remove-file name="$sourcedir/Mod-Sisyphus.php"/>
+        <remove-file name="$themedir/scripts/sisyphus.min.js"/>
+        <code>hooks.php</code>
+    </uninstall>
+
+    <install for="1.0 - 1.1.99">
+        <readme parsebbc="true">readme/english.txt</readme>
+        <readme parsebbc="true" lang="russian">readme/russian.txt</readme>
+        <readme parsebbc="true" lang="english-utf8">readme/english-utf8.txt</readme>
+        <readme parsebbc="true" lang="russian-utf8">readme/russian-utf8.txt</readme>
+        <require-file name="scripts/sisyphus.min.js" destination="$themedir"/>
+        <require-file name="Mod-Sisyphus.php" destination="$sourcedir"/>
+        <code>modification.php</code>
+    </install>
+
+    <uninstall for="1.0 - 1.1.99">
+        <remove-file name="$themedir/sisyphus.min.js"/>
+        <remove-file name="$sourcedir/Mod-Sisyphus.php"/>
+        <code>modification.php</code>
+    </uninstall>
+
+</package-info>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE modification SYSTEM "http://www.simplemachines.org/xml/modification">
+<modification xmlns="http://www.simplemachines.org/xml/modification">
+
+    <id>digger:sisyphus</id>
+    <name>Sisyphus</name>
+    <type>modification</type>
+    <version>1.2</version>
+
+    <file name="$themedir/index.template.php">
+        <operation>
+            <search position="after"><![CDATA[// If RSS feeds are enabled, advertise the presence of one.]]></search>
+            <add>
+                // * Sisyphus mod
+                <script type="text/javascript"><!-- // --><![CDATA[
+                        !window.jQuery && document.write(unescape(\'%3Cscript src="http://code.jquery.com/jquery.min.js"%3E%3C/script%3E\'));
+                // ]]></script>
+                <script language="JavaScript" type="text/javascript"
+                        src="', $settings['default_theme_url'], '/sisyphus.min.js?11"></script>
+
+                <script type="text/javascript"><!-- // --><![CDATA[
+                        jQuery(document).ready(function() {
+                                jQuery("#postmodify").sisyphus();
+                        });
+                // ]]></script>';
+
+                // * Sisyphus mod
+            </add>
+        </operation>
+    </file>
+
+
+</modification>
