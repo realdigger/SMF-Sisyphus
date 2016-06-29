@@ -6,4 +6,4 @@ Sisyphus mod will restore entered text in the Quick Reply form and Reply form, a
 
 Sisyphus.js at GitHub: [url]github.com/simsalabim/sisyphus[/url]
 
-This mod is licensed under CC BY-NC-ND [url]http://creativecommons.org/licenses/by-nc-nd/4.0/[/url]
+This mod is licensed under GPLv3
