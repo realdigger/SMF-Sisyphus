@@ -2,9 +2,9 @@
 /**
  * @package SMF Sisyphus Mod
  * @author digger
- * @copyright 2011-2015
- * @license CC BY-NC-ND http://creativecommons.org/licenses/by-nc-nd/4.0/
- * @version 1.2
+ * @copyright 2011-2016
+ * @license GPLv3
+ * @version 1.3
  *
  * To run this install manually please make sure you place this
  * in the same place and SSI.php and index.php

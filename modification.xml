@@ -5,7 +5,7 @@
     <id>digger:sisyphus</id>
     <name>Sisyphus</name>
     <type>modification</type>
-    <version>1.2</version>
+    <version>1.3</version>
 
     <file name="$themedir/index.template.php">
         <operation>
@@ -16,7 +16,7 @@
                         !window.jQuery && document.write(unescape(\'%3Cscript src="http://code.jquery.com/jquery.min.js"%3E%3C/script%3E\'));
                 // ]]></script>
                 <script language="JavaScript" type="text/javascript"
-                        src="', $settings['default_theme_url'], '/sisyphus.min.js?11"></script>
+                        src="', $settings['default_theme_url'], '/sisyphus/sisyphus.min.js"></script>
 
                 <script type="text/javascript"><!-- // --><![CDATA[
                         jQuery(document).ready(function() {

@@ -2,13 +2,14 @@
 /**
  * @package SMF Sisyphus Mod
  * @author digger
- * @copyright 2011-2015
- * @license CC BY-NC-ND http://creativecommons.org/licenses/by-nc-nd/4.0/
- * @version 1.2
+ * @copyright 2011-2016
+ * @license GPLv3
+ * @version 1.3
  */
 
-if (!defined('SMF'))
+if (!defined('SMF')) {
     die('Hacking attempt...');
+}
 
 /**
  * Load all needed hooks
@@ -26,8 +27,10 @@ function addSisyphusCopyright()
 {
     global $context;
 
-    if ($context['current_action'] == 'credits')
-        $context['copyrights']['mods'][] = '<a href="http://mysmf.ru/mods/sisyphus" target="_blank">Sisyphus</a> &copy; 2011-2015, digger';
+    if ($context['current_action'] == 'credits') {
+        $context['copyrights']['mods'][] = '<a href="http://mysmf.ru/mods/sisyphus" title="SMF Sisyphus mod" target="_blank">SMF Sisyphus mod</a> &copy; 2011-2016, digger | <a href="https://github.com/simsalabim/sisyphus" title="Sisyphus.js" target="_blank">Sisyphus.js</a>';
+    }
+
 }
 
 /**
@@ -39,12 +42,14 @@ function loadSisyphusJS()
 
     $context['insert_after_template'] .= '
                 <script type="text/javascript"><!-- // --><![CDATA[
-                        !window.jQuery && document.write(unescape(\'%3Cscript src="http://code.jquery.com/jquery.min.js"%3E%3C/script%3E\'));
+                        !window.jQuery && document.write(unescape(\'%3Cscript src="//code.jquery.com/jquery.min.js"%3E%3C/script%3E\'));
                 // ]]></script>
-                <script type="text/javascript" src="' . $settings['default_theme_url'] . '/scripts/sisyphus.min.js?11"></script>
+                <script type="text/javascript" src="' . $settings['default_theme_url'] . '/scripts/sisyphus/sisyphus.min.js"></script>
                 <script type="text/javascript"><!-- // --><![CDATA[        	    
                         jQuery(document).ready(function() {
-                                jQuery("#postmodify").sisyphus();
+                                jQuery("#postmodify").sisyphus({
+                                locationBased: true,                             
+                                });
                         });  
                 // ]]></script>';
 
