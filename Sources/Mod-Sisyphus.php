@@ -2,9 +2,9 @@
 /**
  * @package SMF Sisyphus Mod
  * @author digger
- * @copyright 2011-2016
- * @license GPLv3
- * @version 1.3
+ * @copyright 2011-2017
+ * @license MIT
+ * @version 2.0
  */
 
 if (!defined('SMF')) {
@@ -28,9 +28,8 @@ function addSisyphusCopyright()
     global $context;
 
     if ($context['current_action'] == 'credits') {
-        $context['copyrights']['mods'][] = '<a href="http://mysmf.ru/mods/sisyphus" title="SMF Sisyphus mod" target="_blank">SMF Sisyphus mod</a> &copy; 2011-2016, digger | <a href="https://github.com/simsalabim/sisyphus" title="Sisyphus.js" target="_blank">Sisyphus.js</a>';
+        $context['copyrights']['mods'][] = '<a href="http://mysmf.net/mods/sisyphus" title="Sisyphus" target="_blank">Sisyphus</a> &copy; 2011-2017, digger</a>';
     }
-
 }
 
 /**
@@ -40,17 +39,13 @@ function loadSisyphusJS()
 {
     global $context, $settings;
 
-    $context['insert_after_template'] .= '
-                <script type="text/javascript"><!-- // --><![CDATA[
-                        !window.jQuery && document.write(unescape(\'%3Cscript src="//code.jquery.com/jquery.min.js"%3E%3C/script%3E\'));
-                // ]]></script>
-                <script type="text/javascript" src="' . $settings['default_theme_url'] . '/scripts/sisyphus/sisyphus.min.js"></script>
-                <script type="text/javascript"><!-- // --><![CDATA[        	    
-                        jQuery(document).ready(function() {
-                                jQuery("#postmodify").sisyphus({
-                                locationBased: true,                             
-                                });
-                        });  
-                // ]]></script>';
+    if (empty($context['current_topic'])) {
+        return false;
+    }
 
+    $context['insert_after_template'] .= '
+        <script type="text/javascript"><!-- // --><![CDATA[
+        var sisyphusKey = "topic-' . $context['current_topic'] . '-reply";        
+        // ]]></script>
+        <script type="text/javascript" src="' . $settings['default_theme_url'] . '/scripts/sisyphus.js"></script>';
 }

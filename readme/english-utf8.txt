@@ -4,6 +4,4 @@ Imagine you're filling a complex form on site, or typing effervescent and extens
 With Sisyphus on site you just reopen page in your modern (with HTML5 support) browser and see all your changes at that forms. It's lightweight jQuery plugin uses Local Storage to prevent your work being lost.
 Sisyphus mod will restore entered text in the Quick Reply form and Reply form, after browser crash/closing.
 
-Sisyphus.js at GitHub: [url]github.com/simsalabim/sisyphus[/url]
-
-This mod is licensed under GPLv3
+This mod is licensed under MIT
