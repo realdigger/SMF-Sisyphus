@@ -43,6 +43,11 @@ function loadSisyphusJS()
         return false;
     }
 
+    // Skip Sisyphus for message edit
+    if (!empty($_GET['action']) && ($_GET['action'] == 'post' || $_GET['action'] == 'post2') && !empty($_GET['msg'])) {
+        return false;
+    }
+
     $context['insert_after_template'] .= '
         <script type="text/javascript"><!-- // --><![CDATA[
         var sisyphusKey = "topic-' . $context['current_topic'] . '-reply";        
