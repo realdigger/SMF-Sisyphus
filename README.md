@@ -1,7 +1,14 @@
+[![GitHub release](https://img.shields.io/github/release/realdigger/SMF-Sisyphus.svg)]()
+[![Build Status](https://travis-ci.org/realdigger/SMF-Sisyphus.svg?branch=master)](https://travis-ci.org/realdigger/SMF-Sisyphus)
+[![SMF](https://img.shields.io/badge/SMF-2.0-blue.svg?style==flat)](https://simplemachines.org)
+[![SMF](https://img.shields.io/badge/SMF-2.1-blue.svg?style==flat)](https://simplemachines.org)
+[![Hooks](https://img.shields.io/badge/hooks%20only-✓-blue.svg?style==flat)]()
+[![license](https://img.shields.io/github/license/realdigger/SMF-Sisyphus.svg)]()
+
 # SMF Sisyphus mod
 * **Author:** digger [http://mysmf.net](http://mysmf.net)  
 * **License:** The MIT License (MIT)
-* **Compatible with:** SMF 2.0
+* **Compatible with:** SMF 2.0, SMF 2.1
 * **Hooks only:** Yes
 
 ## Installation  
